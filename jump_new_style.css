@@ -1,0 +1,144 @@
+nav li {
+	list-style-type: none;
+	display: inline;
+}
+
+.first_nav a {
+	color: white;
+	text-decoration: none;
+}
+
+.first_nav li:hover {
+	text-decoration: underline;
+}
+
+.second_nav a {
+	color: black;
+	text-decoration: none;
+}
+
+.second_nav li:hover {
+	background-color: #006CFF;
+}
+
+.side_images {
+	list-style-type: none
+}
+
+.side_images li {
+	height: 100px;
+	width: 100px;
+}
+
+.col1 {
+	float: left;
+	width: 149px;
+	height: 659px;
+	background-color: #006CFF;
+	border-width: .5px;
+	border-radius: 15px 0px 15px 15px;
+}
+
+.col2 {
+	position: relative;
+	float:left;
+	color: white;
+	background-color: #006CFF;
+	width: 560px;
+	border-radius: 0px 15px 0px 0px;
+}
+
+.first_nav ul{
+	margin-left: 44px;
+	margin-top: 5px;
+	padding-left: 0px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+}
+
+.first_nav li{
+}
+
+h1 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: x-large;
+    font-weight: normal;
+    text-align: center;
+}
+.second_nav ul{
+	margin-left: 44px;
+	padding-left: 0px;
+	margin-top: 0px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	font-weight: normal;
+}
+
+.second_nav li{
+	padding-right: 26px;
+	border-style: solid;
+	border-width: .5px;
+	border-radius: 0px 0px 15px 15px;
+	padding-left: 26px;
+}
+
+.col3 {
+	float: left;
+	position: fixed;
+	margin-left: 142px;
+	margin-top: 30px;
+	height: 632px;
+	border-radius: 15px 0px 0px 0px;
+	background-color: white;
+}
+
+.dsl, .colocation, .web_hosting, footer {
+	margin-left: 50px;
+	margin-right: 340px;
+	width: 470px;
+}
+
+.dsl img {
+	float: left;
+	width: 182px;
+	height: 94px;
+}
+
+.dsl .p1 {
+	margin-left: 200px;
+}
+
+.dsl .p3 {
+	font-size: 15px;
+	border-style: solid;
+}
+
+.colocation .p1 {
+	margin-top: 30px;
+	width: 300px;
+}
+
+.colocation img {
+	width: 93px;
+    height: 129px;
+    float: right;
+}
+
+.web_hosting {
+	margin-top: 50px;
+}
+
+.web_hosting img {
+	width: 121px;
+	height: 108px;
+	float: left;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    font-size: 10px;
+    text-align: center;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+}

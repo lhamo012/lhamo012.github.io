@@ -14,34 +14,47 @@ generateOptions = function() {
 	}
 }
 
+checkLogic = function() {
+	max = document.querySelector("#max").value;
+	easyType = document.querySelector("#easytype").checked;
+	if (max < 3 && easyType) {
+		alert("Please choose a longer max word length than 2 when selecting Easy Typing");
+	}
+}
+
 submit = function() {
     min = document.querySelector("#min").value;
+    max = document.querySelector("#max").value;
+    maxLen = document.querySelector("#maxlen").value;
+	easyType = document.querySelector("#easytype").checked;
+	subs = document.querySelector("#subs").checked;
+
+	// default min
     if (min == "Choose min word length") {
     	min = 0;
     }
 
-	max = document.querySelector("#max").value;
+    // default max
 	if (max == "Choose max word length") {
 		max = 4;
 	}
 
+	// default maxLen
+	if(maxLen == '') {
+		maxLen = 100;
+	}
+
+	// error alert 
 	if (min>max) {
 		alert("Please make sure that min is less than max!");
 		var minSelect = document.getElementById("min");
 		var maxSelect = document.getElementById("max");
 		minSelect.selectedIndex = 0;
         maxSelect.selectedIndex = 0;
+	} else if(easyType && (max < 3)) {
+		alert("Please choose a longer word length than 2 when selecting Easy Typing");
 	} else {
-
-	maxLen = document.querySelector("#maxlen").value;
-	if(maxLen == '') {
-		// default maxLen is 40
-		maxLen = 100;
-	}
-
-	easyType = document.querySelector("#easytype").checked;
-	subs = document.querySelector("#subs").checked;
-	displayPasswordOptions(min, max, easyType, subs);
+		displayPasswordOptions(min, max, easyType, subs);
 	}
 }
 
@@ -84,9 +97,9 @@ displayPasswordOptions = function(min, max, easyType, subs) {
 		// Allow the user to select the option to have number 
 		// substitutions added -- 1 for l, 3 for e, 0 for o, etc.
 		if(subs) {
-			if(!isEasy && easyType) {
+			if(!isEasy) {
 				continue;
-			} else if(!easyType) {
+			} else if(!isEasy) {
 				result.push(words[i]);
 				result_index++;
 			}

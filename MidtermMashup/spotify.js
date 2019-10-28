@@ -73,7 +73,7 @@ function printTopSongs(data) {
                  `;
         for (var i = 0, len = data.tracks.length; i < len; i++) {
             output += `
-                    <li>${data.tracks[i].name}   <button id="showlyricsbtn" onclick="showLyrics()">Show Lyrics</button>
+                    <li>${data.tracks[i].name}   <button id="showlyricsbtn" onclick="showLyrics(this)">Show Lyrics</button>
                     </li>
                        `
         }

@@ -33,7 +33,7 @@ async function setTrackID(data) {
 function displayLyrics(data) {
     console.log(data);
     if (data.message.body.length == 0) {
-        document.getElementById("lyrics").innerHTML = "OOps MusixMatch API does not have lyrics for this song! ☹️";
+        document.getElementById("lyrics").innerHTML = "Oops MusixMatch API does not have lyrics for this song! ☹️";
     } else {
         document.getElementById("lyrics").innerHTML = data.message.body.lyrics.lyrics_body;
     }

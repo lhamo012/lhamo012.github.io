@@ -1,10 +1,9 @@
 ﻿
 var musixtoken = "f675e6b3016cca4313771ec978c56751";
 var musixbaseurl = "https://cors-anywhere.herokuapp.com/http://api.musixmatch.com/ws/1.1/";
-//var fullURL = "http://api.musixmatch.com/ws/1.1/track.search?q_artist=kanye&q_track=ultralight&apikey=" + token;
-//var fullURL = url + "artist.search?s_artist_rating=desc&q_artist=coldplay&page=1&page_size=5";
+
 let musixh = new Headers();
-//musixh.append('Authorization', musixtoken);
+musixh.append('Authorization', musixtoken);
 
 async function showLyrics(button) {
     clearLyrics();
@@ -23,7 +22,6 @@ async function setTrackID(data) {
         alert("Musixmatch does not have a trackID for this song. Please choose another song!");
     } else {
         const trackid = data.message.body.track_list[0].track.track_id;
-        console.log(trackid);
         var trackURL = musixbaseurl + 'track.lyrics.get?track_id=' + trackid + '&apikey=' + musixtoken;
         const req = await makeRequest(trackURL, musixh);
         submit(displayLyrics, req);
@@ -31,8 +29,7 @@ async function setTrackID(data) {
 }
 
 function displayLyrics(data) {
-    console.log(data);
-    if (data.message.body.length == 0) {
+    if (data.message.body.length == 0 || data.message.body.lyrics.lyrics_body == "") {
         document.getElementById("lyrics").innerHTML = "Oops MusixMatch API does not have lyrics for this song! ☹️";
     } else {
         document.getElementById("lyrics").innerHTML = data.message.body.lyrics.lyrics_body;

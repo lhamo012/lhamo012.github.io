@@ -1,18 +1,14 @@
-// Spotify API requirements 
-var spotifytoken = 'BQB2_CxSoH5whLcQfHGuyjZpd7HTUNDPh-XaQnHUJA0qdKvfPSKr-V3Iq9VG_1n2PPczqmxTDdvzaZ9ya0NZfhVZyh_6Sv7Ra2Jx3MwqXzT9WfddiQK4mWa6KGQ2GbUSPqEgqBMbPPZS7mSoGQ';
-//const uri = 'https://api.spotify.com/v1/playlists/37i9dQZF1DX9tPFwDMOaN1/tracks?fields=items(track(id%2Cname))';
+// Spotify API requirements
+var spotifytoken = 'BQCj96LDoe3jaX54OdePc40QFucVd1ShsYWDH6Nl8GrbwXmnGoFtPVG6uxnyLYTQRxX5Rg96CKcyie303jmNt9tbnD510dDHV7Och-Y-OIz_MkPQn7f6yVF7r6yxqwNugX-5D5fP_nPdj-8oQQ';
+// Defining headers
 let spotifyh = new Headers();
 spotifyh.append('Authorization', 'Bearer ' + spotifytoken);
 spotifyh.append('Accept', 'application/json');
 spotifyh.append('Content-Type', 'application/json');
 
-// Base URL
 const spotifybaseurl = 'https://api.spotify.com/v1';
-
 const search_ex = "/search?";
-
 var art_ex = "/artists/";
-// This will change once search works
 var artistID;
 var artistTopTracksURL;
 var artistname;
@@ -33,13 +29,11 @@ async function searchArtist() {
         alert("Please enter an artistname");
         clearFields();
     } else {
-        console.log(artistname);
         var searchURL = spotifybaseurl + search_ex + 'q=' + artistname + '&type=artist';
         const req = await makeRequest(searchURL, spotifyh);
         // Gets response and sets artist ID
         submit(setArtistID, req);
     }
-
 }
 
 // Sets the artistID and the toptracks url
@@ -54,9 +48,7 @@ async function setArtistID(data) {
         const req2 = await makeRequest(artistTopTracksURL, spotifyh)
         submit(printTopSongs, req2);
     }
-
 }
-                   // <li>${data.tracks[i].name}   <button id="showlyricsbtn" onclick="showLyrics(this)">Show Lyrics</button></li>
 
 // Prints the top tracks as a list
 function printTopSongs(data) {

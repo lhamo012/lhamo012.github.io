@@ -1,4 +1,3 @@
-
 // Spotify API requirements
 var spotifytoken = 'BQCj96LDoe3jaX54OdePc40QFucVd1ShsYWDH6Nl8GrbwXmnGoFtPVG6uxnyLYTQRxX5Rg96CKcyie303jmNt9tbnD510dDHV7Och-Y-OIz_MkPQn7f6yVF7r6yxqwNugX-5D5fP_nPdj-8oQQ';
 // Defining headers

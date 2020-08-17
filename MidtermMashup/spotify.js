@@ -1,5 +1,5 @@
 // Spotify API requirements
-var spotifytoken = 'BQD9DLPyuPt_uWk8H2Oyuv7lJ_-ieFIHAUF5pL2g5JUgE72dMg6TEgwGbdZqwT28f098n6Yivzb2AjNWHoaXB-bvFyXfg0xbkljXEG7u_e3V6A1ab1RiUrYtlBaT20qTjUCWdNrXhU3rPus';
+var spotifytoken = 'BQDQomRrJA55xLLeYIHVdoyeFl_DET0f9JaPywL7_6Mg_lR08jSmP5POSGS-9J3xTRWOUiUO9sOxGlkFeMm0YDj9aZrMOrg7Wuw5rx3fjS7xNpGIkicOdr56XN4_v_T4upAf0yzUfbqo4W4';
 // Defining headers
 let spotifyh = new Headers();
 spotifyh.append('Authorization', 'Bearer ' + spotifytoken);

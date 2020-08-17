@@ -1,4 +1,6 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700");
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Libre+Caslon+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&display=swap");
 @import "reset";
 @import "home";
 
@@ -33,7 +35,7 @@ table {
 
 html, body {
   height:100%;
-  font-family: 'Roboto', sans-serif;
+  font-family:'Alata', sans-serif;
 }
 
 .btn-big {
@@ -45,4 +47,5 @@ html, body {
   background: #272727;
   color: white;
 }
+
 
